@@ -18,7 +18,7 @@ const Button: React.FC<ButtonProps> = ({
   const baseClasses = 'font-medium rounded-md transition duration-300';
   
   const variantClasses = {
-    primary: 'bg-blue-600 hover:bg-blue-700 text-white',
+    primary: 'text-orange',
     secondary: 'bg-gray-200 hover:bg-gray-300 text-gray-800',
     outline: 'bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-50'
   };

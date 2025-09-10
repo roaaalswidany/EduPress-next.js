@@ -1,54 +1,47 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
+import { CheckIcon } from 'lucide-react';
 
 const GrowYourSkill: React.FC = () => {
   const certifications = [
-    { name: 'Web Development', icon: '💻' },
-    { name: 'Data Science', icon: '📊' },
-    { name: 'Digital Marketing', icon: '📱' },
-    { name: 'Graphic Design', icon: '🎨' },
-    { name: 'Business Management', icon: '💼' },
-    { name: 'Language Learning', icon: '🌐' },
+    { name: 'Certification', icon: <CheckIcon size={24} color='green'/> },
+    { name: 'Certification', icon: <CheckIcon size={24} color='green'/> },
+    { name: 'Certification', icon: <CheckIcon size={24} color='green'/> },
+    { name: 'Certification', icon: <CheckIcon size={24} color='green'/> },
   ];
 
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-10 md:mb-0 flex justify-center">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="md:w-1/2 flex justify-center md:justify-start">
             <div className="relative">
-              <div className="w-64 h-64 bg-blue-100 rounded-lg flex items-center justify-center">
-                <div className="text-6xl">🚀</div>
-              </div>
-              
-              <div className="absolute -bottom-4 -left-4 bg-green-500 text-white font-bold py-2 px-4 rounded-lg shadow-lg">
-                Grow Your Skill
-              </div>
+              <Image
+                src="/assets/images/Grow.png"
+                alt="Grow"
+                width={500}
+                height={500}
+                className="object-contain"
+              />
             </div>
           </div>
           
-          <div className="md:w-1/2 md:pr-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Grow Your Skill</h2>
-            <p className="text-gray-600 mb-6">
-              Enhance your professional skills with our comprehensive courses and earn industry-recognized certifications.
+          <div className="md:w-1/2">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">Grow your skill with LearnPress LMS</h2>
+            <p className="text-gray-600 mb-8 leading-relaxed">
+              We denounce with righteous indignation and dislike men who are so beguiled and demoralized that cannot trouble.
             </p>
             
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Popular Certifications</h3>
-              <div className="grid grid-cols-2 gap-4">
-                {certifications.map((cert, index) => (
-                  <div key={index} className="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition duration-300">
-                    <span className="text-2xl mr-3">{cert.icon}</span>
-                    <span className="font-medium text-gray-700">{cert.name}</span>
-                  </div>
-                ))}
-              </div>
+            <div className="grid gap-4">
+              {certifications.map((cert, index) => (
+                <div key={index} className="flex items-center p-3 rounded-lg">
+                  <span className="text-2xl mr-4">{cert.icon}</span>
+                  <span className="font-medium text-gray-700">{cert.name}</span>
+                </div>
+              ))}
             </div>
-            
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300">
-              Get Certified
-            </button>
           </div>
         </div>
       </div>

@@ -10,6 +10,7 @@ import FeaturedCourses from '@/components/home/FeaturedCourses';
 import Stats from '@/components/home/Stats';
 import LearnPressAddOns from '@/components/home/LearnPressAddOns';
 import GrowYourSkill from '@/components/home/GrowYourSkill';
+import Let from '@/components/home/Let';
 
 export default function Home() {
   const dispatch = useDispatch<AppDispatch>();
@@ -29,6 +30,7 @@ export default function Home() {
       <LearnPressAddOns/>
       <Stats />
       <GrowYourSkill/>
+      <Let/>
     </div>
   );
 }

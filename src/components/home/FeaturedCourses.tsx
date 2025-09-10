@@ -9,7 +9,7 @@ interface FeaturedCoursesProps {
 
 const FeaturedCourses: React.FC<FeaturedCoursesProps> = ({ courses }) => {
   return (
-    <section className="py-12">
+    <section className="bg-white">
       <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-10">
           <div className="text-left">
