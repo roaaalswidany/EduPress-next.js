@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface User {
   id: string;
   username: string;
@@ -19,6 +21,14 @@ export interface Chapter {
 }
 
 export interface Course {
+  instructor: unknown;
+  level: ReactNode;
+  quizzesCount: ReactNode;
+  lessonsCount: ReactNode;
+  enrolledCount: ReactNode;
+  name: string
+  avatar: string
+  thumbnail: string;
   id: string;
   title: string;
   category: string;
