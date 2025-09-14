@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Course } from '@/lib/types/index';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import LeaveComment from '../LeaveComment/LeaveComment';
 
 interface FaqsProps {
   course: Course;
@@ -23,38 +24,50 @@ const Faqs: React.FC<FaqsProps> = ({ course }) => {
     },
     {
       id: '2',
-      question: 'What is LearnPress?',
-      answer: 'LearnPress is a comprehensive WordPress LMS Plugin for WordPress. This is one of the best WordPress LMS Plugins which can be used to easily create & sell courses online.'
+      question: 'What Does Royalty Free Mean?',
+      answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Utma, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.'
     },
-    // Add more FAQs as needed
+    {
+      id: '3',
+      question: 'What Does Royalty Free Mean?',
+      answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Utma, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.'
+    },
+    {
+      id: '4',
+      question: 'What Does Royalty Free Mean?',
+      answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Utma, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.'
+    },
   ];
 
   return (
-    <div>
-      <h2 className="text-xl font-semibold mb-6">Frequently Asked Questions</h2>
+    <div className="bg-white p-8 rounded-lg shadow-md">
+      <h2 className="text-2xl font-bold mb-8 text-gray-800">Frequently Asked Questions</h2>
       
-      <div className="space-y-4">
+      <div className="space-y-6">
         {faqs.map((faq) => (
-          <div key={faq.id} className="border border-gray-200 rounded-md overflow-hidden">
+          <div key={faq.id} className="border border-gray-200 rounded-lg overflow-hidden transition-all duration-300">
             <button 
               onClick={() => toggleItem(faq.id)}
-              className="bg-white px-6 py-4 flex justify-between items-center w-full text-left"
+              className="bg-white px-6 py-5 flex justify-between items-center w-full text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
             >
-              <h3 className="font-medium text-gray-900">{faq.question}</h3>
+              <h3 className="font-semibold text-lg text-gray-900">{faq.question}</h3>
               {openItems[faq.id] ? (
-                <ChevronUp size={20} />
+                <ChevronUp size={24} className="text-orange-600 flex-shrink-0" />
               ) : (
-                <ChevronDown size={20} />
+                <ChevronDown size={24} className="text-gray-500 flex-shrink-0" />
               )}
             </button>
             
             {openItems[faq.id] && (
-              <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                <p className="text-gray-700">{faq.answer}</p>
+              <div className="px-6 py-5 bg-gray-50 border-t border-gray-200">
+                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
               </div>
             )}
           </div>
         ))}
+      </div>
+            <div className="mt-12">
+        <LeaveComment/>
       </div>
     </div>
   );

@@ -37,12 +37,12 @@ const Let: React.FC = () => {
           
           <div className="flex gap-4 mr-8"> 
             <Button 
-              className="text-orange-500 border-2 border-orange-500 hover:bg-orange-50 px-6 py-3 rounded-4xl font-medium"
+              className="text-orange-500 border-2 border-orange-500 hover:bg-orange-50 px-6 py-3 rounded-4xl font-medium cursor-pointer"
             >
               I’m a student
             </Button>
             <Button 
-              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-4xl font-medium"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-4xl font-medium cursor-pointer"
             >
               Become an Instructor
             </Button>

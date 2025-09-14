@@ -272,7 +272,7 @@ const Curriculum: React.FC<CourseCurriculumProps> = ({ course }) => {
           <div key={chapter.id} className="border border-gray-200 rounded-lg overflow-hidden">
             <button
               onClick={() => toggleItem(`chapter-${chapter.id}`)}
-              className="bg-white px-6 py-4 flex justify-between items-center w-full text-left hover:bg-gray-50 transition-colors"
+              className="bg-white px-6 py-4 flex justify-between items-center w-full text-left hover:bg-gray-50 transition-colors cursor-pointer"
             >
               <div className="flex items-center">
                 <h3 className="font-semibold text-gray-900 text-lg">{chapter.title}</h3>

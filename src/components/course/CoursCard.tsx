@@ -47,7 +47,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
             { course.price > 0 ? (
               <>
               
-                                <span className="text-sm text-gray-500 line-through mr-2">${course.originalPrice.toFixed(2)}</span>
+                    <span className="text-sm text-gray-500 line-through mr-2">${course.originalPrice.toFixed(2)}</span>
                     <span className="text-lg font-bold text-green-600">Free</span>
               </>
             ):
@@ -58,7 +58,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
             </div>
             <Link 
               href={`/courses/${course.id}`} 
-              className=" py-2 px-4 rounded-md transition duration-300 font-bold"
+              className=" py-2 px-4 rounded-md transition duration-300 font-bold cursor-pointer"
             >
               View More
             </Link>

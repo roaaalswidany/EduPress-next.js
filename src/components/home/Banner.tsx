@@ -15,7 +15,7 @@ const Banner: React.FC = () => {
           <p className="text-gray-600 mb-6">
             We denounce with righteous indignation and dislike men who are so beguiled and demoralized that cannot trouble.
           </p>
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg">
+          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg cursor-pointer">
             Posts Comment
           </Button>
         </div>

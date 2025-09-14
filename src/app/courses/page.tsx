@@ -56,13 +56,13 @@ export default function CoursesPage() {
               placeholder="Search courses..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 w-full sm:w-64"
+              className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 w-full sm:w-64 cursor-pointer"
             />
             <div className="flex gap-2">
               <button
                 onClick={() => setViewMode('grid')}
                 className={`p-2 rounded-lg border ${
-                  viewMode === 'grid' ? 'bg-orange-500 text-white' : 'bg-white text-gray-700'
+                  viewMode === 'grid' ? 'bg-orange-500 text-white' : 'bg-white text-gray-700 cursor-pointer'
                 }`}
               >
                 <LayoutGrid className="w-5 h-5" />
@@ -70,7 +70,7 @@ export default function CoursesPage() {
               <button
                 onClick={() => setViewMode('list')}
                 className={`p-2 rounded-lg border ${
-                  viewMode === 'list' ? 'bg-orange-500 text-white' : 'bg-white text-gray-700'
+                  viewMode === 'list' ? 'bg-orange-500 text-white' : 'bg-white text-gray-700 cursor-pointer'
                 }`}
               >
                 <List className="w-5 h-5" />

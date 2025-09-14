@@ -95,7 +95,7 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
           <div className="sticky top-6">
             <div className="bg-gray-50 rounded-lg p-6 shadow-sm">
 
-{course.price > 0 ? (
+              {course.price > 0 ? (
                 <>
                   <div className="flex items-center mb-4">
                     <span className="text-3xl font-bold text-gray-900">${course.price.toFixed(2)}</span>
@@ -110,7 +110,7 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
                 <span className="text-2xl font-bold text-green-600">Free</span>
               )}
               
-              <Button size="lg" className="w-full mb-4">
+              <Button size="lg" className="w-full mb-4 cursor-pointer">
                 {course.price > 0 ? 'Enroll Now' : 'Start Learning'}
               </Button>
               

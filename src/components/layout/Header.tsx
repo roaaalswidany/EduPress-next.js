@@ -29,20 +29,20 @@ const Header: React.FC = () => {
           </div>
 
           <nav className="hidden md:flex flex-1 justify-center space-x-8 font-medium">
-            <Link href="/" className="hover:text-orange-500 transition">
+            <Link href="/" className="hover:text-orange-500 transition cursor-pointer">
               Home
             </Link>
-            <Link href="/courses" className="hover:text-orange-500 transition">
+            <Link href="/courses" className="hover:text-orange-500 transition cursor-pointer">
               Courses
             </Link>
-            <Link href="/blog" className="hover:text-orange-500 transition">
+            <Link href="/blog" className="hover:text-orange-500 transition cursor-pointer">
               Blog
             </Link>
             
             <div className="relative">
               <button 
                 onClick={() => setDesktopPageOpen(!desktopPageOpen)}
-                className="hover:text-orange-500 transition flex items-center"
+                className="hover:text-orange-500 transition flex items-center cursor-pointer"
               >
                 Page
                 <ChevronDown size={16} className="ml-1" />
@@ -50,20 +50,20 @@ const Header: React.FC = () => {
               
               {desktopPageOpen && (
                 <div className="absolute top-full left-0 mt-2 w-40 bg-white shadow-lg rounded-md py-2 z-50">
-                  <Link href="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  <Link href="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
                     About Us
                   </Link>
-                  <Link href="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  <Link href="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
                     Contact
                   </Link>
-                  <Link href="/faq" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  <Link href="/faq" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
                     FAQ
                   </Link>
                 </div>
               )}
             </div>
             
-            <Link href="/premium" className="hover:text-orange-500 transition">
+            <Link href="/premium" className="hover:text-orange-500 transition cursor-pointer">
               Premium Theme
             </Link>
           </nav>
@@ -71,11 +71,11 @@ const Header: React.FC = () => {
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/login"
-              className="text-gray-600 hover:text-orange-500 transition font-medium"
+              className="text-gray-600 hover:text-orange-500 transition font-medium cursor-pointer"
             >
               Login / Register
             </Link>
-            <button className="p-2 hover:text-orange-500 transition">
+            <button className="p-2 hover:text-orange-500 transition cursor-pointer">
               <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
                 <Search size={24} />
               </div>
@@ -116,7 +116,7 @@ const Header: React.FC = () => {
             />
             <span className="text-xl font-bold">EduPress</span>
           </div>
-          <button onClick={() => setSidebarOpen(false)}>
+          <button onClick={() => setSidebarOpen(false)} className=" cursor-pointer">
             <X size={24} />
           </button>
         </div>
@@ -124,21 +124,21 @@ const Header: React.FC = () => {
         <nav className="flex flex-col p-4">
           <Link
             href="/"
-            className="px-4 py-3 text-orange-500 bg-orange-50 font-medium rounded-md mb-2"
+            className="px-4 py-3 text-orange-500 bg-orange-50 font-medium rounded-md mb-2 cursor-pointer"
             onClick={() => setSidebarOpen(false)}
           >
             Home
           </Link>
           <Link
             href="/courses"
-            className="px-4 py-3 hover:bg-gray-50 text-gray-800 font-medium rounded-md mb-2"
+            className="px-4 py-3 hover:bg-gray-50 text-gray-800 font-medium rounded-md mb-2 cursor-pointer"
             onClick={() => setSidebarOpen(false)}
           >
             Courses
           </Link>
           <Link
             href="/blog"
-            className="px-4 py-3 hover:bg-gray-50 text-gray-800 font-medium rounded-md mb-2"
+            className="px-4 py-3 hover:bg-gray-50 text-gray-800 font-medium rounded-md mb-2 cursor-pointer"
             onClick={() => setSidebarOpen(false)}
           >
             Blog
@@ -146,12 +146,12 @@ const Header: React.FC = () => {
 
           <button
             onClick={() => setMobilePageOpen(!mobilePageOpen)}
-            className="px-4 py-3 flex items-center justify-between hover:bg-gray-50 text-gray-800 font-medium rounded-md mb-2"
+            className="px-4 py-3 flex items-center justify-between hover:bg-gray-50 text-gray-800 font-medium rounded-md mb-2 cursor-pointer"
           >
             Page
             <ChevronDown
               size={18}
-              className={`transition-transform ${mobilePageOpen ? "rotate-180" : ""}`}
+              className={` cursor-pointer transition-transform ${mobilePageOpen ? "rotate-180" : ""}`}
             />
           </button>
 
@@ -159,21 +159,21 @@ const Header: React.FC = () => {
             <div className="flex flex-col bg-gray-50 rounded-md mb-2 overflow-hidden">
               <Link
                 href="/about"
-                className="pl-8 pr-4 py-2 hover:bg-gray-100 text-gray-700 text-sm"
+                className="pl-8 pr-4 py-2 hover:bg-gray-100 text-gray-700 text-sm cursor-pointer"
                 onClick={() => setSidebarOpen(false)}
               >
                 About Us
               </Link>
               <Link
                 href="/contact"
-                className="pl-8 pr-4 py-2 hover:bg-gray-100 text-gray-700 text-sm"
+                className="pl-8 pr-4 py-2 hover:bg-gray-100 text-gray-700 text-sm cursor-pointer"
                 onClick={() => setSidebarOpen(false)}
               >
                 Contact
               </Link>
               <Link
                 href="/faq"
-                className="pl-8 pr-4 py-2 hover:bg-gray-100 text-gray-700 text-sm"
+                className="pl-8 pr-4 py-2 hover:bg-gray-100 text-gray-700 text-sm cursor-pointer"
                 onClick={() => setSidebarOpen(false)}
               >
                 FAQ
@@ -183,7 +183,7 @@ const Header: React.FC = () => {
 
           <Link
             href="/premium"
-            className="px-4 py-3 hover:bg-gray-50 text-gray-800 font-medium rounded-md mb-2"
+            className="px-4 py-3 hover:bg-gray-50 text-gray-800 font-medium rounded-md mb-2 cursor-pointer"
             onClick={() => setSidebarOpen(false)}
           >
             Premium Theme
@@ -194,7 +194,7 @@ const Header: React.FC = () => {
           <div className="relative">
             <Search
               size={18}
-              className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+              className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 cursor-pointer"
             />
             <input
               type="text"
@@ -205,7 +205,7 @@ const Header: React.FC = () => {
         </div>
 
         <div className="px-4 mt-6">
-          <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 rounded-full transition">
+          <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 rounded-full transition cursor-pointer">
             Login
           </button>
         </div>

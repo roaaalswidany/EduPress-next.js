@@ -77,7 +77,7 @@ export const loginUser = (credentials: LoginCredentials) => async (dispatch: App
     
     const user = users.find(
       u => (u.email === credentials.email || u.username === credentials.username) && 
-           u.password === credentials.password
+      u.password === credentials.password
     );
     
     if (user) {

@@ -29,7 +29,7 @@ const LearnPressAddOns: React.FC = () => {
           </p>
           
           <div className="mt-10">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg cursor-pointer">
             Explorer Course
           </Button>
             <div className="h-12"></div> 
