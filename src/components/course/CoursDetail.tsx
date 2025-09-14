@@ -32,6 +32,7 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
       case 'reviews':
         return <Reviews course={course} />;
       default:
+        
         return <Overview course={course} />;
     }
   };
