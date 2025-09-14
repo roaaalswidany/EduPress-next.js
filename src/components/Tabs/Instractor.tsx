@@ -3,7 +3,7 @@
 import React from 'react';
 import { Course } from '@/lib/types/index';
 import Image from 'next/image';
-import { Facebook, Twitter, Instagram, Linkedin, Users, BookOpen, Youtube } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Users, BookOpen, Youtube } from 'lucide-react';
 import LeaveComment from '../LeaveComment/LeaveComment';
 
 interface InstructorProps {

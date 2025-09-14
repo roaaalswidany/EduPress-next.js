@@ -8,7 +8,7 @@ interface CourseOverviewProps {
   course: Course;
 }
 
-const Overview: React.FC<CourseOverviewProps> = ({ course }) => {
+const Overview: React.FC<CourseOverviewProps> = ({ }) => {
   return (
     <div className="max-w-4xl mx-auto">
 

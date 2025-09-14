@@ -10,7 +10,7 @@ interface ReviewsProps {
   course: Course;
 }
 
-const Reviews: React.FC<ReviewsProps> = ({ course }) => {
+const Reviews: React.FC<ReviewsProps> = ({ }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const reviewsPerPage = 3;
 

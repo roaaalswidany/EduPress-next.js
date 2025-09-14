@@ -1,6 +1,6 @@
-import { RootState } from './index';
+import { RootState } from '@/store';
 import { AnyAction, ThunkDispatch } from '@reduxjs/toolkit';
-import { AppDispatch, store } from './../../store/index';
+import { AppDispatch, store } from '@/store';
 import { ReactNode } from "react";
 
 export interface User {
@@ -13,14 +13,17 @@ export interface User {
 export interface Lesson {
   id: string;
   title: string;
-  duration: string;
+  duration: number;
   type: 'video' | 'text' | 'quiz';
 }
 
 export interface Chapter {
   id: string;
   title: string;
+  description?: string
   lessons: Lesson[];
+  totalLessons: number
+  totalDuration: number
 }
 
 export interface Course {
@@ -36,7 +39,7 @@ export interface Course {
   title: string;
   category: string;
   author: string;
-  duration: string;
+  duration: number;
   students: number;
   lessons: number;
   quizzes: number;

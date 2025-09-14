@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/navigation';
 import { loginUser, registerUser } from '@/store/slices/authSlice';
-import { AppDispatch, RootState } from '@/lib/types/index';
+import { AppDispatch, RootState } from '@/store';
 import AuthForm from '@/components/auth/AuthForm';
 
 export default function AuthPage() {

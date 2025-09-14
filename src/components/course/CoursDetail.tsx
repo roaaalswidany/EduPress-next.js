@@ -10,7 +10,7 @@ import Curriculum from '@/components/Tabs/Curriculum';
 import Instructor from '@/components/Tabs/Instractor';
 import Faqs from '@/components/Tabs/Faqs';
 import Reviews from '@/components/Tabs/Reviews';
-import { BookOpen, Clock, FileText, Users, Play } from 'lucide-react';
+import { BookOpen, Clock, FileText, Users } from 'lucide-react';
 
 interface CourseDetailProps {
   course: Course;

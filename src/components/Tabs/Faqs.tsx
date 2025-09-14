@@ -9,7 +9,7 @@ interface FaqsProps {
   course: Course;
 }
 
-const Faqs: React.FC<FaqsProps> = ({ course }) => {
+const Faqs: React.FC<FaqsProps> = ({ }) => {
   const [openItems, setOpenItems] = useState<Record<string, boolean>>({});
 
   const toggleItem = (id: string) => {

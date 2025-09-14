@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { User, AuthState, LoginCredentials, RegisterData } from '../../lib/types/index';
+import { User, AuthState, LoginCredentials, RegisterData} from '../../lib/types/index';
+import { AppDispatch, RootState } from '@/store';
 
 const initialState: AuthState = {
   users: [],
@@ -56,6 +57,7 @@ export const {
 export const registerUser = (userData: RegisterData) => async (dispatch: AppDispatch) => {
   try {
     dispatch(registerStart());
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { confirmPassword, ...userDataWithoutConfirm } = userData;
     const newUser: User = {
       id: Date.now().toString(),

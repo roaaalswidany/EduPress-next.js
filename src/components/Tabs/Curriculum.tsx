@@ -17,6 +17,7 @@ interface Lesson {
 interface Chapter {
   id: string;
   title: string;
+  description?: string
   lessons: Lesson[];
   totalLessons: number;
   totalDuration: string;
@@ -28,7 +29,7 @@ interface CourseCurriculumProps {
   };
 }
 
-const Curriculum: React.FC<CourseCurriculumProps> = ({ course }) => {
+const Curriculum: React.FC<CourseCurriculumProps> = ({ }) => {
   const [openItems, setOpenItems] = useState<Record<string, boolean>>({});
 
   const toggleItem = (id: string) => {
