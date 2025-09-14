@@ -42,103 +42,102 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
         Homepage {'>'} Course {'>'} {course.title}
       </div>
 
-      <div className="relative w-full h-64 md:h-96 bg-gray-200">
-        <Image
-          src={course.image || '/default-course.jpg'}
-          alt={course.title}
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-white text-center px-4">
-            {course.title}
-          </h1>
-        </div>
-      </div>
-
-      <div className="px-6 py-4 bg-white border-b border-gray-200">
-        <div className="flex flex-wrap justify-center gap-4 md:gap-8">
-          <div className="flex items-center">
-            <Clock size={18} className="text-gray-600 mr-2" />
-            <span className="text-sm md:text-base">{course.duration}</span>
-          </div>
-          <div className="flex items-center">
-            <Users size={18} className="text-gray-600 mr-2" />
-            <span className="text-sm md:text-base">{course.enrolledCount} Students</span>
-          </div>
-          <div className="flex items-center">
-            <BookOpen size={18} className="text-gray-600 mr-2" />
-            <span className="text-sm md:text-base">{course.lessonsCount} Lessons</span>
-          </div>
-          <div className="flex items-center">
-            <FileText size={18} className="text-gray-600 mr-2" />
-            <span className="text-sm md:text-base">{course.quizzesCount} Quizzes</span>
-          </div>
-          <div className="flex items-center">
-            <span className="text-sm md:text-base bg-green-100 text-green-800 px-2 py-1 rounded-full">
-              {course.level}
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-col lg:flex-row">
-        <div className="w-full lg:w-8/12">
-          <CourseTabs activeTab={activeTab} setActiveTab={setActiveTab} />
-          
-          <div className="p-6">
-            {renderTabContent()}
-          </div>
-        </div>
-
-        <div className="w-full lg:w-4/12 border-l border-gray-200 p-6">
-          <div className="sticky top-6">
-            <div className="bg-gray-50 rounded-lg p-6 shadow-sm">
-
-              {course.price > 0 ? (
-                <>
-                  <div className="flex items-center mb-4">
-                    <span className="text-3xl font-bold text-gray-900">${course.price.toFixed(2)}</span>
-                    {course.originalPrice > course.price && (
-                      <span className="text-lg text-gray-500 line-through ml-2">
-                        ${course.originalPrice.toFixed(2)}
-                      </span>
-                    )}
-                  </div>
-                </>
-              ) : (
-                <span className="text-2xl font-bold text-green-600">Free</span>
-              )}
+      {/* Header Section with Black Background */}
+      <div className="relative bg-black px-6 pt-4 pb-10 md:pt-16 md:pb-16">
+        <div className="container mx-auto">
+          <div className="flex flex-col lg:flex-row items-center">
+            <div className="lg:w-1/2 text-white mb-8 lg:mb-0 lg:pr-10">
+              <div className="flex items-center text-white mb-2">
+                <span className="text-lg font-medium border border-gray-600 bg-gray-600 p-2">Photography</span>
+                <span className="mx-2 text-gray-600">by</span>
+                <span className="text-lg font-semibold">DeterminedPoinas</span>
+              </div>
               
-              <Button size="lg" className="w-full mb-4 cursor-pointer">
-                {course.price > 0 ? 'Enroll Now' : 'Start Learning'}
-              </Button>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                The Ultimate Guide To The Best WordPress LMS Plugin
+              </h1>
               
-              <div className="text-center text-sm text-gray-600">
-                <p>30-Day Money-Back Guarantee</p>
+              <div className="flex flex-wrap gap-6 mb-6">
+                <div className="flex items-center">
+                  <Clock size={20} className="text-orange-400 mr-2" />
+                  <span>2 Weeks</span>
+                </div>
+                <div className="flex items-center">
+                  <Users size={20} className="text-orange-400 mr-2" />
+                  <span>156 Students</span>
+                </div>
+                <div className="flex items-center">
+                  <BookOpen size={20} className="text-orange-400 mr-2" />
+                  <span>20 Lessons</span>
+                </div>
+                <div className="flex items-center">
+                  <FileText size={20} className="text-orange-400 mr-2" />
+                  <span>3 Quizzes</span>
+                </div>
               </div>
             </div>
-
-            <div className="mt-6 bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-              <h3 className="font-semibold text-lg mb-4">This course includes:</h3>
-              <ul className="space-y-3">
-                <li className="flex items-center">
-                  <Play size={16} className="text-green-600 mr-2" />
-                  <span>{course.lessonsCount} on-demand videos</span>
-                </li>
-                <li className="flex items-center">
-                  <FileText size={16} className="text-green-600 mr-2" />
-                  <span>{course.quizzesCount} quizzes</span>
-                </li>
-                <li className="flex items-center">
-                  <Clock size={16} className="text-green-600 mr-2" />
-                  <span>Full lifetime access</span>
-                </li>
-                <li className="flex items-center">
-                  <BookOpen size={16} className="text-green-600 mr-2" />
-                  <span>Certificate of completion</span>
-                </li>
-              </ul>
+            
+            <div className="lg:w-1/2 flex justify-center">
+              <div className="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
+                <div className="relative w-full h-48 md:h-56 rounded-lg overflow-hidden mb-6">
+                  {course.image ? (
+                    <Image
+                      src={course.image}
+                      alt={course.title}
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-r from-blue-800 to-purple-700 flex items-center justify-center">
+                    <span className="text-white text-xl font-bold">No Image Available</span>
+                    </div>
+                  )}
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <div className="flex gap-3">
+                    {course.price > 0 ? (
+                      <>
+                        {course.originalPrice > course.price && (
+                          <span className="text-lg text-gray-500 line-through">
+                            ${course.originalPrice.toFixed(2)}
+                          </span>
+                        )}
+                        <span className="text-2xl font-bold text-orange-500">
+                          ${course.price.toFixed(2)}
+                        </span>
+                      </>
+                    ) : (
+                      <span className="text-2xl font-bold text-green-600">Free</span>
+                    )}
+                  </div>
+                  
+                  <Button 
+                    size="lg" 
+                    className="cursor-pointer bg-orange-500 hover:bg-orange-600 border-0 text-white"
+                  >
+                    {course.price > 0 ? 'Start Now' : 'Start Learning'}
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="relative bg-white">
+        <div className="container mx-auto">
+          <div className="flex flex-col lg:flex-row">
+            <div className="w-full lg:w-8/12">
+              <CourseTabs activeTab={activeTab} setActiveTab={setActiveTab} />
+              
+              <div className="p-6">
+                {renderTabContent()}
+              </div>
+            </div>
+            <div className="w-full lg:w-4/12 border-l border-gray-200 p-6">
+              <div className="sticky top-6">
+              </div>
             </div>
           </div>
         </div>

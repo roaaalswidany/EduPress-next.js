@@ -70,13 +70,14 @@ export const registerUser = (userData: RegisterData) => async (dispatch: AppDisp
   }
 };
 
+
 export const loginUser = (credentials: LoginCredentials) => async (dispatch: AppDispatch, getState: () => RootState) => {
   try {
     dispatch(loginStart());
     const { users } = getState().auth;
     
     const user = users.find(
-      u => (u.email === credentials.email || u.username === credentials.username) && 
+      u => (u.email === credentials.email || u.username === credentials.email) && 
       u.password === credentials.password
     );
     
@@ -84,7 +85,7 @@ export const loginUser = (credentials: LoginCredentials) => async (dispatch: App
       dispatch(loginSuccess(user));
       return { success: true };
     } else {
-      const error = 'Email / Username or password is incorrect';
+      const error = 'Email/Username or password is incorrect';
       dispatch(loginFailure(error));
       return { success: false, error };
     }
