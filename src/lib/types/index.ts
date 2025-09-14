@@ -10,17 +10,20 @@ export interface User {
 export interface Lesson {
   id: string;
   title: string;
-  duration: number;
+  duration: string;
   type: 'video' | 'text' | 'quiz';
+  preview?: boolean;
+  completed?: boolean;
+  locked?: boolean;
 }
 
 export interface Chapter {
   id: string;
   title: string;
-  description?: string
+  description?: string;
   lessons: Lesson[];
-  totalLessons: number
-  totalDuration: number
+  totalLessons: number;
+  totalDuration: string;
 }
 
 export interface Course {
@@ -36,7 +39,7 @@ export interface Course {
   title: string;
   category: string;
   author: string;
-  duration: number;
+  duration: string;
   students: number;
   lessons: number;
   quizzes: number;
@@ -93,4 +96,3 @@ export interface RegisterData {
   password: string;
   confirmPassword: string;
 }
-

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCourses } from '@/store/slices/coursesSlice';
 import { setCurrentPage, setTotalPages } from '@/store/slices/uiSlice';
-import { AppDispatch, RootState } from '@/lib/types/index';
+import { AppDispatch, RootState } from '@/store';
 import CourseList from '@/components/course/CoursList';
 import Pagination from '@/components/ui/Pagination';
 import { LayoutGrid, List } from 'lucide-react'; 

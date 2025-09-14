@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCourses } from '@/store/slices/coursesSlice';
-import { AppDispatch, RootState } from '@/lib/types/index';
+import { AppDispatch, RootState } from '@/store';
 import Banner from '@/components/home/Banner';
 import Categories from '@/components/home/Categories';
 import FeaturedCourses from '@/components/home/FeaturedCourses';
