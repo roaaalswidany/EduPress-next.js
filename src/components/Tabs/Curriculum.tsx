@@ -3,40 +3,20 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Play, Check, Lock } from 'lucide-react';
 import LeaveComment from '../LeaveComment/LeaveComment';
-
-interface Lesson {
-  id: string;
-  title: string;
-  type: string;
-  duration: string;
-  preview?: boolean;
-  completed?: boolean;
-  locked?: boolean;
-}
-
-interface Chapter {
-  id: string;
-  title: string;
-  description?: string
-  lessons: Lesson[];
-  totalLessons: number;
-  totalDuration: string;
-}
+import { Chapter } from '@/lib/types/index';
 
 interface CourseCurriculumProps {
-  course: {
-    chapters: Chapter[];
-  };
+  chapters: Chapter[]; 
 }
 
-const Curriculum: React.FC<CourseCurriculumProps> = ({ }) => {
+const Curriculum: React.FC<CourseCurriculumProps> = ({ chapters }) => {
   const [openItems, setOpenItems] = useState<Record<string, boolean>>({});
 
   const toggleItem = (id: string) => {
     setOpenItems(prev => ({ ...prev, [id]: !prev[id] }));
   };
 
-  const curriculumData: Chapter[] = [
+  const displayChapters = chapters?.length > 0 ? chapters : [
     {
       id: '1',
       title: 'Lessons With Video Content',
@@ -153,8 +133,7 @@ const Curriculum: React.FC<CourseCurriculumProps> = ({ }) => {
           type: 'video',
           duration: '5:00',
           preview: true,
-
-        locked: true 
+          locked: true 
         },
         {
           id: '3-5',
@@ -172,7 +151,7 @@ const Curriculum: React.FC<CourseCurriculumProps> = ({ }) => {
       totalLessons: 5,
       totalDuration: '45 Mins',
       lessons: [
-        {
+              {
           id: '4-1',
           title: 'Lessons with video content',
           type: 'video',
@@ -269,7 +248,7 @@ const Curriculum: React.FC<CourseCurriculumProps> = ({ }) => {
       <h2 className="text-2xl font-bold mb-6">Curriculum</h2>
       
       <div className="space-y-4">
-        {curriculumData.map((chapter) => (
+        {displayChapters.map((chapter) => (
           <div key={chapter.id} className="border border-gray-200 rounded-lg overflow-hidden">
             <button
               onClick={() => toggleItem(`chapter-${chapter.id}`)}
@@ -278,7 +257,7 @@ const Curriculum: React.FC<CourseCurriculumProps> = ({ }) => {
               <div className="flex items-center">
                 <h3 className="font-semibold text-gray-900 text-lg">{chapter.title}</h3>
                 <span className="ml-4 text-sm text-gray-500">
-                  {chapter.totalLessons} Lessons • {chapter.totalDuration}
+                  {chapter.totalLessons || chapter.lessons.length} Lessons • {chapter.totalDuration  || '45 Mins'}
                 </span>
               </div>
               <div className="flex items-center space-x-4">
@@ -286,8 +265,7 @@ const Curriculum: React.FC<CourseCurriculumProps> = ({ }) => {
                   {openItems[`chapter-${chapter.id}`] ? 'Hide' : 'Show'}
                 </span>
                 {openItems[`chapter-${chapter.id}`] ? (
-
-      <ChevronUp size={20} className="text-gray-500" />
+                  <ChevronUp size={20} className="text-gray-500" />
                 ) : (
                   <ChevronDown size={20} className="text-gray-500" />
                 )}
@@ -299,7 +277,7 @@ const Curriculum: React.FC<CourseCurriculumProps> = ({ }) => {
                 {chapter.lessons.map((lesson, index) => (
                   <div key={lesson.id} className={`px-6 py-4 flex justify-between items-center ${
                     index !== chapter.lessons.length - 1 ? 'border-b border-gray-200' : ''
-                  }`}>
+}`}>
                     <div className="flex items-center space-x-4">
                       <div className="p-2 rounded-full bg-blue-100">
                         <Play size={16} className="text-blue-500" />
@@ -307,9 +285,11 @@ const Curriculum: React.FC<CourseCurriculumProps> = ({ }) => {
                       <span className="text-gray-800 font-medium">{lesson.title}</span>
                     </div>
                     <div className="flex items-center space-x-4">
-                      <span className="text-xs bg-blue-500 text-white px-3 py-1 rounded-full border border-blue-600">
-                        Preview
-                      </span>
+                      {lesson.preview && (
+                        <span className="text-xs bg-blue-500 text-white px-3 py-1 rounded-full border border-blue-600">
+                          Preview
+                        </span>
+                      )}
                       <span className="text-sm text-gray-500 flex items-center">
                           {lesson.duration}
                         {lesson.completed ? (

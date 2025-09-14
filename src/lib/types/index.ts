@@ -21,6 +21,9 @@ export interface Chapter {
   id: string;
   title: string;
   lessons: {
+      preview?: boolean;
+      completed?: boolean;
+      locked?: boolean;
     id: string;
     title: string;
     duration: string;

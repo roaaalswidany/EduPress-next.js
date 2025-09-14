@@ -24,7 +24,7 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
       case 'overview':
         return <Overview course={course} />;
       case 'curriculum':
-        return <Curriculum course={course} />;
+        return <Curriculum chapters={[]} />;
       case 'instructor':
         return <Instructor course={course} />;
       case 'faqs':
@@ -41,8 +41,6 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
       <div className="bg-gray-50 px-6 py-3 text-sm text-gray-600">
         Homepage {'>'} Course {'>'} {course.title}
       </div>
-
-      {/* Header Section with Black Background */}
       <div className="relative bg-black px-6 pt-4 pb-10 md:pt-16 md:pb-16">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center">
