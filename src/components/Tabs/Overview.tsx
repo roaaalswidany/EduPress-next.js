@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Course } from '@/lib/types/index';
+import LeaveComment from '@/components/LeaveComment/LeaveComment';
 
 interface CourseOverviewProps {
   course: Course;
@@ -9,30 +10,18 @@ interface CourseOverviewProps {
 
 const Overview: React.FC<CourseOverviewProps> = ({ course }) => {
   return (
-    <div>
-      <h2 className="text-xl font-semibold mb-4">Course Description</h2>
-      <p className="text-gray-700 mb-6">{course.description}</p>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div className="bg-gray-50 p-4 rounded-lg">
-          <h3 className="font-semibold mb-2">What You'll Learn</h3>
-          <ul className="list-disc list-inside space-y-1 text-gray-600">
-            <li>Create and manage online courses</li>
-            <li>Set up quizzes and assignments</li>
-            <li>Manage student progress</li>
-            <li>Monetize your courses</li>
-          </ul>
-        </div>
-        
-        <div className="bg-gray-50 p-4 rounded-lg">
-          <h3 className="font-semibold mb-2">Requirements</h3>
-          <ul className="list-disc list-inside space-y-1 text-gray-600">
-            <li>Basic WordPress knowledge</li>
-            <li>Web hosting with WordPress installed</li>
-            <li>Desire to create educational content</li>
-          </ul>
-        </div>
+    <div className="max-w-4xl mx-auto">
+
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Overview</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          LearnPress is a comprehensive WordPress LMS Plugin for WordPress. This is one of the best WordPress LMS Plugins which can be used to easily create & sell courses online. You can create a course curriculum with lessons & quizzes included which is managed with an easy-to-use interface for users. Having this WordPress LMS Plugin, now you have a chance to quickly and easily create education, online school, online-course websites with no coding knowledge required.
+        </p>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          LearnPress is free and always will be, but it is still a premium high-quality WordPress Plugin that definitely helps you with making money from your WordPress Based LMS. Just try and see how amazing it is. LearnPress WordPress Online Course plugin is lightweight and super powerful with lots of Add-Ons to empower its core system. How to use WPML Add-on for LearnPress? No comments yet! You be the first to comment.
+        </p>
       </div>
+      <LeaveComment />
     </div>
   );
 };

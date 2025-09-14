@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 
 interface PaginationProps {
@@ -9,37 +7,28 @@ interface PaginationProps {
   paginate: (pageNumber: number) => void;
 }
 
-const Pagination: React.FC<PaginationProps> = ({ 
-  itemsPerPage, 
-  totalItems, 
-  currentPage, 
-  paginate 
-}) => {
+const Pagination: React.FC<PaginationProps> = ({ itemsPerPage, totalItems, currentPage, paginate }) => {
   const pageNumbers = [];
-
   for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
     pageNumbers.push(i);
   }
 
   return (
-    <nav className="mt-8 flex justify-center">
-      <ul className="flex space-x-2">
-        {pageNumbers.map(number => (
-          <li key={number}>
-            <button
-              onClick={() => paginate(number)}
-              className={`px-4 py-2 rounded-md ${
-                currentPage === number
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-white text-blue-600 hover:bg-gray-100'
-              }`}
-            >
-              {number}
-            </button>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <div className="flex justify-center mt-8 space-x-2">
+      {pageNumbers.map((number) => (
+        <button
+          key={number}
+          onClick={() => paginate(number)}
+          className={`w-10 h-10 flex items-center justify-center rounded-full border transition ${
+            currentPage === number
+              ? 'bg-black text-white border-black'
+              : 'bg-white text-black border-gray-300 hover:bg-gray-100'
+          }`}
+        >
+          {number}
+        </button>
+      ))}
+    </div>
   );
 };
 

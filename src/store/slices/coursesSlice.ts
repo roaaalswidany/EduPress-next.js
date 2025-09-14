@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Course, CoursesState } from '../../lib/types/index';
+import { AppDispatch, Course, CoursesState } from '../../lib/types/index';
 import { mockCourses } from '@/lib/data/mockData';
 
 const initialState: CoursesState = {

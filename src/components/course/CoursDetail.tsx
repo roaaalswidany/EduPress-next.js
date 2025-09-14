@@ -10,7 +10,7 @@ import Curriculum from '@/components/Tabs/Curriculum';
 import Instructor from '@/components/Tabs/Instractor';
 import Faqs from '@/components/Tabs/Faqs';
 import Reviews from '@/components/Tabs/Reviews';
-import { BookOpen, Clock, FileText, Star, Users, Play, ChevronDown, ChevronUp } from 'lucide-react';
+import { BookOpen, Clock, FileText, Users, Play } from 'lucide-react';
 
 interface CourseDetailProps {
   course: Course;
@@ -38,12 +38,10 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
 
   return (
     <div className="bg-white">
-      {/* Breadcrumb */}
       <div className="bg-gray-50 px-6 py-3 text-sm text-gray-600">
         Homepage {'>'} Course {'>'} {course.title}
       </div>
 
-      {/* Course Header with Image */}
       <div className="relative w-full h-64 md:h-96 bg-gray-200">
         <Image
           src={course.image || '/default-course.jpg'}
@@ -58,7 +56,6 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
         </div>
       </div>
 
-      {/* Course Info Stats */}
       <div className="px-6 py-4 bg-white border-b border-gray-200">
         <div className="flex flex-wrap justify-center gap-4 md:gap-8">
           <div className="flex items-center">
@@ -85,20 +82,15 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="flex flex-col lg:flex-row">
-        {/* Left Content */}
         <div className="w-full lg:w-8/12">
-          {/* Tabs Navigation */}
           <CourseTabs activeTab={activeTab} setActiveTab={setActiveTab} />
           
-          {/* Tab Content */}
           <div className="p-6">
             {renderTabContent()}
           </div>
         </div>
 
-        {/* Right Sidebar */}
         <div className="w-full lg:w-4/12 border-l border-gray-200 p-6">
           <div className="sticky top-6">
             <div className="bg-gray-50 rounded-lg p-6 shadow-sm">
@@ -127,7 +119,6 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
               </div>
             </div>
 
-            {/* Course Features */}
             <div className="mt-6 bg-white rounded-lg p-6 shadow-sm border border-gray-200">
               <h3 className="font-semibold text-lg mb-4">This course includes:</h3>
               <ul className="space-y-3">
