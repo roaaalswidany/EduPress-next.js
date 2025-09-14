@@ -1,6 +1,3 @@
-import { RootState } from '@/store';
-import { AnyAction, ThunkDispatch } from '@reduxjs/toolkit';
-import { AppDispatch, store } from '@/store';
 import { ReactNode } from "react";
 
 export interface User {
@@ -97,5 +94,3 @@ export interface RegisterData {
   confirmPassword: string;
 }
 
-export type AppDispatch = ThunkDispatch<RootState, unknown, AnyAction>
-export type RootState = ReturnType<typeof store.getState>
