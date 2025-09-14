@@ -20,10 +20,14 @@ export interface Lesson {
 export interface Chapter {
   id: string;
   title: string;
-  description?: string;
-  lessons: Lesson[];
-  totalLessons: number;
-  totalDuration: string;
+  lessons: {
+    id: string;
+    title: string;
+    duration: string;
+    type: "video";
+  }[];
+  totalLessons?: number;
+  totalDuration?: string;
 }
 
 export interface Course {

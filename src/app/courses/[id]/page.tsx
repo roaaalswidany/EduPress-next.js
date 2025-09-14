@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCourses, setCurrentCourse } from '@/store/slices/coursesSlice';
-import { AppDispatch, RootState } from '@/lib/types/index';
+import { AppDispatch, RootState } from '@/store';
 import CourseDetail from '@/components/course/CoursDetail';
 
 export default function CourseDetailPage() {

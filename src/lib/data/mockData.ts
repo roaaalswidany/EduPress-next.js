@@ -34,7 +34,15 @@ export const mockCourses: Course[] = [
           { id: '1-2-2', title: 'Plugin Integration', duration: '18:30', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   },
   {
     id: '2',
@@ -61,7 +69,15 @@ export const mockCourses: Course[] = [
           { id: '2-1-2', title: 'Control Structures', duration: '22:10', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   },
   {
     id: '3',
@@ -88,7 +104,15 @@ export const mockCourses: Course[] = [
           { id: '3-1-2', title: 'On-Page Optimization', duration: '19:30', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   },
   {
     id: '4',
@@ -115,7 +139,15 @@ export const mockCourses: Course[] = [
           { id: '4-1-2', title: 'Wireframing Techniques', duration: '17:45', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   },
   {
     id: '5',
@@ -131,7 +163,7 @@ export const mockCourses: Course[] = [
     price: 89.0,
 
 
-originalPrice: 119.0,
+    originalPrice: 119.0,
     description: 'Comprehensive data science course covering statistical analysis, machine learning, and data visualization using R.',
     featured: false,
     image: '/assets/images/course5.png',
@@ -144,7 +176,15 @@ originalPrice: 119.0,
           { id: '5-1-2', title: 'Data Structures in R', duration: '19:15', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   },
   {
     id: '6',
@@ -171,7 +211,15 @@ originalPrice: 119.0,
           { id: '6-1-2', title: 'State Management', duration: '25:45', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   },
   {
     id: '7',
@@ -198,7 +246,15 @@ originalPrice: 119.0,
           { id: '7-1-2', title: 'AWS Global Infrastructure', duration: '18:20', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   },
   {
     id: '8',
@@ -225,7 +281,15 @@ originalPrice: 119.0,
           { id: '8-1-2', title: 'Async/Await Patterns', duration: '19:30', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   },
   {
     id: '9',
@@ -252,7 +316,15 @@ originalPrice: 119.0,
           { id: '9-1-2', title: 'Content Structure', duration: '17:45', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   },
   {
     id: '10',
@@ -268,7 +340,7 @@ originalPrice: 119.0,
     price: 70.0,
 
 
-originalPrice: 90.0,
+    originalPrice: 90.0,
     description: 'Build native mobile apps using React Native and JavaScript for both iOS and Android platforms.',
     featured: true,
     image: '/assets/images/course4.png',
@@ -281,7 +353,15 @@ originalPrice: 90.0,
           { id: '10-1-2', title: 'Navigation and Routing', duration: '23:30', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   },
   {
     id: '11',
@@ -308,7 +388,15 @@ originalPrice: 90.0,
           { id: '11-1-2', title: 'Decision Trees', duration: '21:45', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   },
   {
     id: '12',
@@ -335,7 +423,15 @@ originalPrice: 90.0,
           { id: '12-1-2', title: 'Typography Fundamentals', duration: '18:45', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   },
   {
     id: '13',
@@ -362,7 +458,15 @@ originalPrice: 90.0,
           { id: '13-1-2', title: 'Docker Containers', duration: '25:30', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   },
   {
     id: '14',
@@ -389,7 +493,15 @@ originalPrice: 90.0,
           { id: '14-1-2', title: 'Data Visualization', duration: '21:45', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   },
   {
     id: '15',
@@ -407,7 +519,7 @@ originalPrice: 90.0,
     description: 'Complete iOS app development course using Swift and Xcode for Apple platforms.',
 
 
-featured: true,
+    featured: true,
     image: '/assets/images/course3.png',
     chapters: [
       {
@@ -418,7 +530,15 @@ featured: true,
           { id: '15-1-2', title: 'UIKit Fundamentals', duration: '26:45', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   },
   {
     id: '16',
@@ -445,7 +565,15 @@ featured: true,
           { id: '16-1-2', title: 'Encryption Methods', duration: '22:30', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   },
   {
     id: '17',
@@ -472,7 +600,15 @@ featured: true,
           { id: '17-1-2', title: 'Color Grading', duration: '21:20', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   },
   {
     id: '18',
@@ -499,7 +635,15 @@ featured: true,
           { id: '18-1-2', title: 'Risk Management', duration: '22:45', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   },
   {
     id: '19',
@@ -526,7 +670,15 @@ featured: true,
           { id: '19-1-2', title: 'Smart Contracts', duration: '24:30', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   },
   {
     id: '20',
@@ -553,6 +705,14 @@ featured: true,
           { id: '20-1-2', title: 'Composition Rules', duration: '22:45', type: 'video' },
         ]
       }
-    ]
+    ],
+    instructor: undefined,
+    level: undefined,
+    quizzesCount: undefined,
+    lessonsCount: undefined,
+    enrolledCount: undefined,
+    name: '',
+    avatar: '',
+    thumbnail: ''
   }
 ];
